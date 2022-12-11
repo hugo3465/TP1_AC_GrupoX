@@ -12,6 +12,21 @@
 extern "C" {
 #endif
 
+//#include "encomendas.c"
+
+typedef struct {
+	char codEncomenda[5];
+	float preco;
+	Cliente cliente;
+	Produto Produtos[1]; //Vai precisar de memoria dinamica
+	Data dataRequerimento; //Esta campo indica o dia em que foi requesiada a encomenda
+	Data dataEntrega;
+}Encomenda;
+
+typedef struct {
+	int contador;
+	Encomenda encomenda[1]; //Vai precisar de memoria dinamica
+}Encomendas;
 
 
 #ifdef __cplusplus

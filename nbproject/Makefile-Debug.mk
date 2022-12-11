@@ -39,6 +39,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/encomendas.o \
 	${OBJECTDIR}/input.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/materiais.o \
 	${OBJECTDIR}/producao.o \
 	${OBJECTDIR}/produtos.o
 
@@ -86,6 +87,11 @@ ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/materiais.o: materiais.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -std=c99 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/materiais.o materiais.c
 
 ${OBJECTDIR}/producao.o: producao.c
 	${MKDIR} -p ${OBJECTDIR}

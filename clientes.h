@@ -14,6 +14,22 @@ extern "C" {
 
 
 
+//#define "clientes.c"
+
+typedef struct {
+	int codCliente;
+	char nome[99];//tentar fazer dinamico no final
+	char morada[155];
+	int nif;
+	char origem[100]; // country
+	enum estado { DESATIVO = 0, ATIVO = 1 };
+}Cliente;
+
+typedef struct {
+	int contador;
+	Cliente cliente[1]; //Vai precisar de memoria dinamica
+}Clientes;
+
 
 
 
