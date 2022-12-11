@@ -14,6 +14,19 @@ extern "C" {
 
 #include "input.c" // pode nao ser necessario no netbeans
 
+typedef struct {
+	int dia;
+	int mes;
+	int ano;
+}Data;
+
+typedef struct {
+	float altura;
+	float largura;
+	float comprimento;
+}Dimensao;
+
+
 void pause();
 
 void limparBuffer();
